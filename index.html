@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant&family=Josefin+Slab:wght@300&family=Oswald:wght@300&family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+    <title>Exxen</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        body{
+            margin:0;
+            padding:0;
+        }
+        .main-menu{
+            height: auto;
+            background-color: #fbcb04;
+            display: flex;
+            padding: 30px;
+            justify-content: space-evenly;
+            align-content: center;
+        }
+        .logo-div{
+            display: flex;
+        }
+        .logo img{
+            height: 4.375rem;
+            width: 9rem;
+        }
+        .slogan{
+            margin-left: 10px;
+            width: 20px;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 600;
+        }
+        .button-div{
+            position: relative;
+            right: 300px;
+        }
+
+        .membership{
+            height: 42px;
+            width: 320px;
+            background-color: #080808 ;
+            border: 0px;
+            color:#fbcb04;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: medium;
+        }
+        .signin-div{
+            margin: auto 0px;
+            display: flex;
+            justify-content:space-evenly;
+            align-items: center;
+            margin-left: 60px;
+        }
+        .signin-div .sign-in{
+            height: 2.625rem;
+            width: 5rem;
+            background-color:#fbcb04 ;
+            border: 1px solid;
+            color:#000000;
+            font-family: 'Roboto Condensed', sans-serif;
+            margin: 0 10px;
+        }
+        .signin-div select{
+            height: 2.625rem;
+            width: 3rem;
+            background-color:#fbcb04 ;
+            color:#000000;
+            font-family: 'Roboto Condensed', sans-serif;
+            text-decoration: none;
+            border: 0;
+            text-align: right;
+        }
+        .content{
+            background-color: black;
+            height: auto;
+        }
+        form .sign-in{
+            margin-top: 20px;
+            height: 2.625rem;
+            width: 5rem;
+            background-color:#fbcb04 ;
+            border: 1px solid;
+            color:#000000;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        .form-container{
+            display: flex;
+            justify-content: center;
+        }
+        .image-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0px;
+        }
+        .image-container img{
+            width: 100%;
+        }
+        .card{
+            border:0px;
+            margin: 0px 20px;
+            width: 8rem;
+        }
+        .row{
+            margin: 20px 50px;
+        }
+        .card-body{
+            background-color: #000000;
+            color: white;
+            font-family: 'Roboto Condensed', sans-serif;
+        }  
+        .devices{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+        }
+        .sign-up-h4{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Roboto Condensed', sans-serif;
+            padding: 0px 20%;
+            text-align: center;
+        }
+        .movies{
+            padding: 50px;
+        }
+        .download{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .download img{
+            height:40px;
+            margin:20px 20px;
+        }
+
+        .social{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social img{
+            margin:10px 5px;
+        }
+        .help-desk{
+            text-align:center ;
+            font-family: 'Roboto Condensed', sans-serif;
+            padding: 70px 0;
+        }
+
+        .help-desk a{
+            text-decoration: none;
+            color: #fbcb04;
+        }
+
+        @media screen and (max-width:900px){
+                .buton-div .membership{
+                    position: absolute;
+                    top:90px;
+                    left:0px;
+                    right:0px;
+                    width: 20rem;
+                }
+                .logo img{
+                    height: 30px;
+                    width: auto;
+                }
+                .slogan{
+                    font-size: smaller;
+                }
+                .main-menu{
+                    padding-bottom: 60px;
+                }
+                input{
+                    display: block;
+                    margin:10px 0px;
+                }
+                button{
+                    display: block;
+                    margin:10px;
+                    width: 300px;
+                }
+                .card{
+                    scale: .8;
+                }
+                .image-container{
+                    padding:0 10%;
+                }
+                
+        }
+
+        @media screen and (max-width:660px){
+            .main-menu{
+                display: block;
+                padding:0;
+                text-size:10px;
+            }
+            .movies{
+                padding: 0;
+                margin:0;
+
+            }
+            .download{
+                display:block;
+                margin-left: 20%;
+            }
+            .devices img{
+                scale: 0.5;
+            }
+            .membership{
+                font-size: 10px;
+            }
+            .sign-in{
+                font-size:10px
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-menu">
+
+        <!-- Bu kısımda logo ve slogan bulunuyor -->
+        <div class="logo-div">
+            <div class="logo">
+                <img src="Exxen.png" alt="exxen-logo">
+            </div>
+            <div class="slogan">
+                <text>Türkiye'nin</text>
+                <text>Dijital Platformu</text>
+            </div>
+        </div>
+
+
+
+        <!-- Bu kısımda signin butonu,dünya logosu ve dil seçenekleri bulunuyor -->
+        <div class="signin-div">
+            <button class="membership">EXXENSPOR Package Commercial Membership</button>
+            <button class="sign-in">Sign In</button>
+            <svg class="world" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="-2 -2 24 24" preserveAspectRatio="xMinYMin" class="jam jam-world"><path d="M2.252 8A8.014 8.014 0 0 0 2 10c0 .69.088 1.36.252 2H5.1a19.83 19.83 0 0 1 0-4H2.252zm.818-2h2.346c.266-1.217.65-2.307 1.121-3.214A8.035 8.035 0 0 0 3.07 6zm14.678 2H14.9a19.83 19.83 0 0 1 0 4h2.848c.164-.64.252-1.31.252-2s-.088-1.36-.252-2zm-.818-2a8.035 8.035 0 0 0-3.467-3.214c.472.907.855 1.997 1.121 3.214h2.346zM7.112 8A17.763 17.763 0 0 0 7 10c0 .685.038 1.355.112 2h5.776a17.763 17.763 0 0 0 0-4H7.112zm.358-2h5.06a10.758 10.758 0 0 0-.783-2.177C11.119 2.568 10.447 2 10 2c-.448 0-1.119.568-1.747 1.823-.315.632-.58 1.367-.783 2.177zm-4.4 8a8.035 8.035 0 0 0 3.467 3.214c-.472-.907-.855-1.997-1.121-3.214H3.07zm13.86 0h-2.346c-.266 1.217-.65 2.307-1.121 3.214A8.035 8.035 0 0 0 16.93 14zm-9.46 0c.203.81.468 1.545.783 2.177C8.881 17.432 9.553 18 10 18c.448 0 1.119-.568 1.747-1.823.315-.632.58-1.367.783-2.177H7.47zM10 20C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            <select class="language" aria-label="Default select example">
+                <option selected >EN</option>
+                <option value="1" data-thumbnail="Exxen.png">TR</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <div class="form-container">
+            <form class="form">
+                <input type="text" name="name" placeholder="Name Surname">
+                <input type="email" name="email" placeholder="E-mail">
+                <button class="sign-in">Sign Up</button>
+            </form>
+        </div>
+
+        <div class="image-container">
+            <div class="uye-ol">
+                <a href="index2.html"><img src="exxen-image1.png" alt="exxen-image1"></a>
+            </div>
+        </div>
+
+        <div class="movies">
+            <div class="row">
+                <div class="center1 col-12 col-sm-6  col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="konusanlar.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">The Conversation Club</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6  col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="asif.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">As If</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6  col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="leylamecnun.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Leyla and Mecnun</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6  col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="tolgashow.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Tolgashow: NoFilter</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-6  col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="cumburlop.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">The King Şakir Cumburlop</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6  col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="serialkillers.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Serial Killers in Turkey</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6  col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="lovebets.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Love Bets are Off</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6  col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="voice.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">The Voice Turkey Rap</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-6  col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="konusanlar.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">The Conversation Club</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6  col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="wildthings.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Wild Things</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6  col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="ghosts.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Ghosts of Nusaybin</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6  col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="sitcom.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">An Underground Sit-com</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-6  col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="enesbatur.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">A Date with Enes Batur</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6  col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="suspects.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Usual Suspects</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6  col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="somestrange.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Some Strange Things</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6  col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="breakaway.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">break Away with Alper Rende</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-6  col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="timeof.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Time of Death</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6  col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="zeynep.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Zeynep Bastık Talk Show</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="seref.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Mr. Şeref</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6  col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="team.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">1 Great Team</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-6  col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="lovestruck.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Lovestruck Ladies of Arabesque</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6  col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="sihirli.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">My Magical Mom</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6  col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="katarsis.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Catharsis</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6  col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="roommates.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Roommates</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="devices">
+            <img src="devices.svg" alt="devices-logo">
+        </div>
+        <div class="sign-up-h4">
+            <h4>Sign up now and start watching from exxen.com, Google Play, AppGallery, App Store, Apple TV and Android TV on mobile, tablet, computer, anytime, anywhere.</h4>
+        </div>
+
+        <div class="download">
+            <div class="apple">
+                <img src="app-store-2.svg" alt="">
+            </div>
+            <div class="googleplay">
+                <img src="google-play@3x.png" alt="">
+            </div>
+            <div class="appgallery">
+                <img src="huawei-app-gallery@3x.png" alt="">
+            </div>
+        </div>
+
+        <div class="social">
+            <div class="instagram">
+                <img src="instagram.svg" alt="">
+            </div>
+            <div class="facebook">
+                <img src="facebook.svg" alt="">
+            </div>
+            <div class="twitter">
+                <img src="twitter.svg" alt="">
+            </div>
+            <div class="youtube">
+                <img src="youtube.svg" alt="">
+            </div>
+            <div class="tiktok">
+                <img src="tiktok.svg" alt="">
+            </div>
+        </div>
+
+        <div class="help-desk">
+            <a href=""><h4>Exxen Help Desk</h4></a>
+        </div>
+    </div>
+    </div>
+    
+
+
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+</body>
+</html>
